@@ -144,6 +144,47 @@ h1:focus {
     color: #fff;
 }
 
+.tech-banner {
+    background: linear-gradient(135deg, #eef4fc 0%, #f5eefc 100%);
+    border: 1px solid #d7e6fb;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0 1.5rem 0;
+}
+
+.tech-banner-text {
+    margin-bottom: 0.6rem;
+}
+
+.tech-banner-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.tech-pill {
+    display: inline-block;
+    background: #1b6ec2;
+    color: #fff;
+    border-radius: 999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.site-footer {
+    margin-top: 3rem;
+    padding: 1rem 0 2rem 0;
+    border-top: 1px solid #e3e3e3;
+    color: #777;
+    font-size: 0.85rem;
+}
+
+.site-footer a {
+    color: #1b6ec2;
+}
+
 .section-heading h2 {
     border-bottom: 2px solid #1b6ec2;
     padding-bottom: 0.35rem;
