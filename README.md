@@ -1,4 +1,4 @@
-# ResumeApp
+﻿# ResumeApp
 
 Michael Gustavus's resume, rebuilt as a .NET solution that replaces the legacy ASP.NET MVC site
 previously hosted at `web-gc-resume-central-dev.azurewebsites.net`. The content (profile,
@@ -15,11 +15,11 @@ built out with resume-specific content:
 
 ```
 ResumeApp.sln
-├── ResumeApp.Shared/   Razor Class Library — all pages, components, models, and data.
-│                       Contains 100% of the resume content and UI. See its README for details.
-├── ResumeApp.Web/      ASP.NET Core Blazor Web App (Interactive Server render mode).
-│                       The public website — the direct replacement for the old MVC site.
-└── ResumeApp/          .NET MAUI Blazor Hybrid app (Windows, Android, iOS, Mac Catalyst).
+|-- ResumeApp.Shared/   Razor Class Library - all pages, components, models, and data.
+|                       Contains 100% of the resume content and UI. See its README for details.
+|-- ResumeApp.Web/      ASP.NET Core Blazor Web App (Interactive Server render mode).
+|                       The public website - the direct replacement for the old MVC site.
+`-- ResumeApp/          .NET MAUI Blazor Hybrid app (Windows, Android, iOS, Mac Catalyst).
                         A native app shell that hosts the same Shared UI in a BlazorWebView.
 ```
 
@@ -37,7 +37,7 @@ platform-specific plumbing needed to boot Blazor in that environment (an ASP.NET
 for the web, a `BlazorWebView` inside a native window for MAUI). This means:
 
 - The resume content and UI are written and maintained **once**.
-- The website and the native app can never visually drift apart — they render the exact same
+- The website and the native app can never visually drift apart - they render the exact same
   `.razor` files.
 - Adding a page (e.g. a new "Certifications" page) means adding one `.razor` file to
   `ResumeApp.Shared/Pages`; both hosts pick it up automatically through `Routes.razor`.
@@ -79,7 +79,7 @@ project.
 
 `ResumeApp.Web/wwwroot/downloads/ResumeApp-Windows.zip` is a self-contained, unpackaged
 `dotnet publish` of the MAUI Windows head, linked from the Home page's "Get the App" section.
-It's a generated build artifact (not committed to source — see `.gitignore`) and needs to be
+It's a generated build artifact (not committed to source - see `.gitignore`) and needs to be
 regenerated any time the app changes:
 
 ```
