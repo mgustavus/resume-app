@@ -1,0 +1,47 @@
+<div class="entry-card">
+    <div class="entry-card-header">
+        <div>
+            <h3 class="entry-title">@Title</h3>
+            @if (!string.IsNullOrWhiteSpace(Subtitle))
+            {
+                <p class="entry-subtitle">@Subtitle</p>
+            }
+        </div>
+        @if (!string.IsNullOrWhiteSpace(DateRange))
+        {
+            <span class="entry-date">@DateRange</span>
+        }
+    </div>
+
+    @ChildContent
+
+    <BulletList Items="Bullets" />
+
+    @if (!string.IsNullOrWhiteSpace(Url))
+    {
+        <a class="entry-link" href="@Url" target="_blank" rel="noopener noreferrer">@(UrlLabel ?? Url)</a>
+    }
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public string Title { get; set; } = string.Empty;
+
+    [Parameter]
+    public string? Subtitle { get; set; }
+
+    [Parameter]
+    public string DateRange { get; set; } = string.Empty;
+
+    [Parameter]
+    public IReadOnlyList<string> Bullets { get; set; } = [];
+
+    [Parameter]
+    public string? Url { get; set; }
+
+    [Parameter]
+    public string? UrlLabel { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

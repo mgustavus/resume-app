@@ -1,0 +1,16 @@
+@using ResumeApp.Shared.Models
+
+<div class="skill-category-card">
+    <h3>@Category.Name</h3>
+    <div class="skill-badges">
+        @foreach (var item in Category.Items)
+        {
+            <SkillBadge Text="@item" />
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public SkillCategory Category { get; set; } = default!;
+}

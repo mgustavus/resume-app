@@ -1,0 +1,25 @@
+@page "/education"
+
+<PageTitle>Education - Michael Gustavus</PageTitle>
+
+<SectionHeading Title="Education" />
+
+<div class="entry-list">
+    @foreach (var edu in ResumeData.Education)
+    {
+        <EntryCard Title="@edu.Degree" Subtitle="@edu.School" DateRange="@edu.DateRange">
+            <p class="entry-gpa">GPA: @edu.Gpa</p>
+            <p>@edu.Description</p>
+            @if (edu.RelevantCourses.Count > 0)
+            {
+                <h4>Relevant Courses</h4>
+                <BulletList Items="edu.RelevantCourses" />
+            }
+            @if (edu.Tools.Count > 0)
+            {
+                <h4>Tools</h4>
+                <BulletList Items="edu.Tools" />
+            }
+        </EntryCard>
+    }
+</div>

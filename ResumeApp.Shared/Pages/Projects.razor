@@ -1,0 +1,16 @@
+@page "/projects"
+
+<PageTitle>Projects - Michael Gustavus</PageTitle>
+
+<SectionHeading Title="Projects" />
+
+<div class="entry-list">
+    @foreach (var project in ResumeData.Projects)
+    {
+        <EntryCard Title="@project.Name"
+                   DateRange="@project.DateRange"
+                   Bullets="project.Bullets"
+                   Url="@project.Url"
+                   UrlLabel="@project.UrlLabel" />
+    }
+</div>

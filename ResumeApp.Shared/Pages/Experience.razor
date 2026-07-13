@@ -1,0 +1,17 @@
+@page "/experience"
+
+<PageTitle>Experience - Michael Gustavus</PageTitle>
+
+<SectionHeading Title="Professional Experience" />
+
+<div class="entry-list">
+    @foreach (var entry in ResumeData.Experience)
+    {
+        <EntryCard Title="@entry.Title"
+                   Subtitle="@entry.Subtitle"
+                   DateRange="@entry.DateRange"
+                   Bullets="entry.Bullets"
+                   Url="@entry.Url"
+                   UrlLabel="@entry.UrlLabel" />
+    }
+</div>

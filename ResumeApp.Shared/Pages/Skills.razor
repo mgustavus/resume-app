@@ -1,0 +1,20 @@
+@page "/skills"
+
+<PageTitle>Skills - Michael Gustavus</PageTitle>
+
+<SectionHeading Title="Skills" />
+
+<section class="page-section">
+    <h3>Key Skills Summary</h3>
+    <BulletList Items="ResumeData.KeySkillsSummary" />
+</section>
+
+<section class="page-section">
+    <h3>Technical Skills</h3>
+    <div class="skill-category-grid">
+        @foreach (var category in ResumeData.TechnicalSkills)
+        {
+            <SkillCategoryCard Category="category" />
+        }
+    </div>
+</section>

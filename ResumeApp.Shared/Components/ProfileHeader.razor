@@ -1,0 +1,26 @@
+@using ResumeApp.Shared.Models
+
+<div class="profile-header">
+    <div class="profile-avatar" aria-hidden="true">@Initials</div>
+    <div class="profile-details">
+        <h1>@Contact.Name</h1>
+        <p class="profile-title">@Contact.Title</p>
+        <ul class="profile-meta">
+            <li>@Contact.Location</li>
+            <li><a href="tel:@Contact.Phone">@Contact.Phone</a></li>
+            <li><a href="mailto:@Contact.Email">@Contact.Email</a></li>
+        </ul>
+        <div class="profile-links">
+            <a class="btn btn-outline-light btn-sm" href="@Contact.LinkedInUrl" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn btn-outline-light btn-sm" href="@Contact.GitHubUrl" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public ContactInfo Contact { get; set; } = default!;
+
+    private string Initials => string.Concat(
+        Contact.Name.Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(w => char.ToUpperInvariant(w[0])));
+}

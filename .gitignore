@@ -1,0 +1,29 @@
+# Build outputs
+[Bb]in/
+[Oo]bj/
+[Pp]ublish/
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.suo
+
+# MAUI / mobile
+*.apk
+*.aab
+*.ipa
+*.appx
+*.appxbundle
+*.appxupload
+*.msix
+*.msixbundle
+
+# Generated build artifact hosted for download (regenerate via `dotnet publish`, not committed to source)
+ResumeApp.Web/wwwroot/downloads/
+
+# OS files
+.DS_Store
+Thumbs.db

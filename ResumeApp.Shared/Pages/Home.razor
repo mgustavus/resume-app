@@ -1,0 +1,27 @@
+@page "/"
+
+<PageTitle>Michael Gustavus - .NET Developer</PageTitle>
+
+<ProfileHeader Contact="ResumeData.Contact" />
+
+<section class="page-section">
+    <SectionHeading Title="Professional Summary" />
+    <p>@ResumeData.ProfessionalSummary</p>
+</section>
+
+<section class="page-section">
+    <SectionHeading Title="Key Skills Summary" />
+    <BulletList Items="ResumeData.KeySkillsSummary" />
+</section>
+
+<section class="page-section home-links">
+    <a class="btn btn-primary" href="experience">View Experience</a>
+    <a class="btn btn-outline-primary" href="projects">View Projects</a>
+    <a class="btn btn-outline-primary" href="contact">Contact Me</a>
+</section>
+
+<section class="page-section">
+    <SectionHeading Title="Get the App" Subtitle="This resume is also available as a native Windows desktop app." />
+    <a class="btn btn-primary" href="downloads/ResumeApp-Windows.zip" download>Download for Windows (.zip)</a>
+    <p class="download-note">Windows 10/11, 64-bit. Unzip and run ResumeApp.exe.</p>
+</section>
